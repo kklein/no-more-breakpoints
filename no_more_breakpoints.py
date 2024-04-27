@@ -9,7 +9,7 @@ def cli():
 
 
 def validate_file(file: Path) -> None:
-    res = subprocess.run(["grep", r"breakpoint()", file], capture_output=True)
+    res = subprocess.run(["rg", r"breakpoint\(\)", file], capture_output=True)
     if res.stdout:
         raise ValueError(f"Found at least one breakpoint in {file}.")
 
