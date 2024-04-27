@@ -1,0 +1,6 @@
+- id: no-more-breakpoints
+  name: No more breakpoints
+  description: This hook checks whether Python files still have pdb breakpoints.
+  entry: nmb
+  language: python
+  types: [py]
