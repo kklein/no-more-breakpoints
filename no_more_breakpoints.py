@@ -2,6 +2,8 @@ import click
 from pathlib import Path
 import subprocess
 
+import sys
+
 
 @click.group()
 def cli():
@@ -9,6 +11,7 @@ def cli():
 
 
 def validate_file(file: Path) -> None:
+    sys.tracebacklimit = 0
     res = subprocess.run(["rg", r"breakpoint\(\)", file], capture_output=True)
     if res.stdout:
         raise ValueError(f"Found at least one breakpoint in {file}.")
