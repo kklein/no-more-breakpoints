@@ -1,5 +1,6 @@
-Ensure  that there are no more [pdb breakpoints] in your code before
-commiting.
+Ensure  that there are no more
+[pdb breakpoints](https://docs.python.org/3/library/functions.html#breakpoint)
+in your code before committing.
 
 ## Installation: Pre-commit Hook
 
