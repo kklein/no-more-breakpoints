@@ -19,9 +19,9 @@ def validate_file(file: Path) -> None:
 
 @cli.command("validate")
 @click.argument(
-    "csv_paths", type=click.Path(exists=True, file_okay=True, dir_okay=False), nargs=-1
+    "file_paths", type=click.Path(exists=True, file_okay=True, dir_okay=False), nargs=-1
 )
-def validate(csv_paths):
-    for csv_path in csv_paths:
-        path = Path(csv_path)
+def validate(file_paths):
+    for file_path in file_paths:
+        path = Path(file_path)
         validate_file(path)

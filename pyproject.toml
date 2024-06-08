@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "no_more_breakpoints"
 version = "0.1.0"
 authors = [
-  { name="kklein"}
+  {name="kklein"}
 ]
 description = "Utility to ensure no more pdb breakpoints are in Python files."
 readme = "README.md"
