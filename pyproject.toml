@@ -19,6 +19,7 @@ classifiers = [
 dependencies = [
     "click"
 ]
+license = {file = "LICENSE"}
 
 [project.urls]
 "Homepage" = "https://github.com/kklein/no-more-breakpoints"
