@@ -11,28 +11,28 @@ in your environment.
 
 Then, either create a `.pre-commit-config.yaml` file in the top level
 of your repository or add an entry to `repos` if you already have a
-`.pre-commit-config.yaml` . If you have `conda` installed on your
-system and want is little hassle as possible, add this:
+`.pre-commit-config.yaml`. There are two hooks to choose from:
 
-```
-repos:
-  - repo: https://github.com/kklein/no-more-breakpoints
-    rev: 0.2.0
-    hooks:
-      - id: no-more-breakpoints-conda
-```
+1. If you have `conda` installed on your system and on your `PATH`, use the following snippet:
 
-Alternatively, you can add the following hook. In this case you need
-to make sure that `ripgrep` is installed on your system and can be
-found on the `PATH`.
+  ```yml
+  repos:
+    - repo: https://github.com/kklein/no-more-breakpoints
+      rev: 0.2.0
+      hooks:
+        - id: no-more-breakpoints-conda
+  ```
 
-```yml
-repos:
-  - repo: https://github.com/kklein/no-more-breakpoints
-    rev: 0.2.0
-    hooks:
-      - id: no-more-breakpoints
-```
+2. Alternatively, if you have `ripgrep` installed on your system and
+on your `PATH`, use the following snippet:
+
+  ```yml
+  repos:
+    - repo: https://github.com/kklein/no-more-breakpoints
+      rev: 0.2.0
+      hooks:
+        - id: no-more-breakpoints
+  ```
 
 
 ## Installation: CLI tool
