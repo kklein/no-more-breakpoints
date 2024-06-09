@@ -5,4 +5,4 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - no-more-breakpoints=0.1.0
+  - no-more-breakpoints=0.2.0
